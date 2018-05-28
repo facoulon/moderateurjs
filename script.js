@@ -1,7 +1,9 @@
 var mytext = document.getElementById("mytext");
 var btnMod = document.getElementById("moderation");
-var result = document.getElementById("result")
+var result = document.getElementById("result");
 
-  if (mytext=":)") {
-      
-  }
+btnMod.addEventListener("click",function(){
+  if (mytext.indexOf(":)") !=-1 {
+      result = mytext.replace(":)","--");
+      result.innerText = mytext;
+  }})
