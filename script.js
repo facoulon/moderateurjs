@@ -1,9 +1,9 @@
-var mytext = document.getElementById("mytext");
-var btnMod = document.getElementById("moderation");
+
+var btnModeration = document.getElementById("moderer");
 var result = document.getElementById("result");
 
-btnMod.addEventListener("click",function(){
-  if (mytext.indexOf(":)") !=-1 {
-      result = mytext.replace(":)","--");
-      result.innerText = mytext;
-  }})
+
+btnModeration.addEventListener("click",function(){
+  var mytext = document.getElementById("mytext").value;
+  result.innerHTML = mytext.replace(":)" ,"--").replace(":')" ,"--").replace(":D" ,"--");
+});
